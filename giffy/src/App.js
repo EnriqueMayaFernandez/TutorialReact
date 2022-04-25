@@ -18,13 +18,14 @@ export default function App() {
           <section className="App-content">
             <Link to="/">
               <figure className="App-logo">
-                <img alt="Giffy logo" src='/logo.png' />
+                <img alt="Giffy logo" src="/logo.png" />
               </figure>
             </Link>
             <GifsContextProvider>
               <Route component={HomePage} path="/" />
               <Route component={SearchResults} path="/search/:keyword" />
               <Route component={Detail} path="/gif/:id" />
+              <Route component={() => <h1>404 ERROR :(</h1>} path="/404" />
             </GifsContextProvider>
           </section>
         </Suspense>
